@@ -1,0 +1,14 @@
+﻿<Window x:Class="TestDBA.NumberSearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestDBA"
+        mc:Ignorable="d"
+        Title="NumberSearchWindow" Height="200" Width="400">
+    <Grid>
+        <TextBox x:Name="NumberSearchTextBox" HorizontalAlignment="Center" Text="{Binding Search_Phone_Number}" Margin="0,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="NumberSearchButton" Content="Найти" Command="{Binding SearchPhoneNumberCommand}" HorizontalAlignment="Center" Margin="0,106,0,0" VerticalAlignment="Top" Width="100" Click="NumberSearchButton_Click"/>
+
+    </Grid>
+</Window>
