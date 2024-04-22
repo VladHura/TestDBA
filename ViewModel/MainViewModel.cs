@@ -56,6 +56,7 @@ namespace TestDBA.ViewModel
                 new PhoneNumber { Abonent = Abonents[1], HomeNumber = 432521, MobileNumber = 96765, WorkNumber = 3241156 },
                 new PhoneNumber { Abonent = Abonents[2], HomeNumber = 127773, MobileNumber = 431112, WorkNumber = 696421 }
             };
+            search_phone_numbers = phone_numbers;
         }
         public ICommand OpenSearchWindowCommand
         {
@@ -119,7 +120,7 @@ namespace TestDBA.ViewModel
         }
         public void UnloadCSV()
         {
-            using (StreamWriter streamWriter = new StreamWriter($"report_{DateTime.Now.ToString("dd-MM-yyyy_HH-MM-ss")}.csv"))
+            using (StreamWriter streamWriter = new StreamWriter($"report_{DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss")}.csv"))
             {
                 streamWriter.Write("FirstName,SecondName,LastName,Street,Building,WorkNumber,MobileNumber,HomeNumber");
                 streamWriter.WriteLine();
